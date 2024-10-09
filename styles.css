@@ -1,0 +1,386 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Top Navigation Bar */
+.top-navbar, .secondary-navbar {
+    background-color: #111;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.top-navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.top-nav-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-nav-links li {
+    list-style: none;
+    margin: 0 1em;
+}
+
+.top-nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav-links li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Secondary Navigation Bar */
+.secondary-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+}
+
+.secondary-nav-links {
+    display: flex;
+}
+
+.secondary-nav-links li {
+    list-style: none;
+    margin: 0 1em;
+}
+
+.secondary-nav-links li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.secondary-nav-links li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.hero-slider-item {
+    /* Ensure the image covers the entire item */
+    position: relative; /* To position the img inside */
+    width: 100%; /* Ensure the item takes full width */
+    height: auto; /* Maintain aspect ratio */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.hero-slider-item img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+
+/* Hero Section with Background Slider */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1; /* Below content */
+}
+
+.hero-slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-slider-item {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-slide-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.hero-slide-button.prev {
+    left: 1em;
+}
+
+.hero-slide-button.next {
+    right: 1em;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Above slider */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.cta-button {
+    margin-top: 1em;
+    padding: 0.8em 2em;
+    font-size: 1em;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c2185b;
+}
+
+
+/* Characters Section */
+.characters {
+    padding: 2em;
+    background-color: #fff;
+}
+
+.character-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    padding: 1em;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Supernatural Manhwa Carousel */
+.carousel-section {
+    padding: 2em;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 0 1em;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.carousel p {
+    margin-top: 0.5em;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: -2em;
+}
+
+.carousel-button.next {
+    right: -2em;
+}
+
+/* About Section */
+.about-section {
+    background-image: url('images/about-bg.jpg'); /* Add a background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    padding: 4em 2em;
+    text-align: center;
+    color: #fff; /* Change text color for contrast */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide overflow from pseudo-element */
+}
+
+.about-section h2 {
+    font-size: 2.5em; /* Increased font size for emphasis */
+    margin-bottom: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for depth */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1em; /* Padding for the paragraph */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Optional: Add a pseudo-element for an overlay effect */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1; /* Ensure it stays behind the text */
+}
+
+.about-section h2, .about-section p {
+    position: relative; /* Position text above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 1200px) {
+    .top-navbar, .secondary-navbar {
+        padding: 0 1em;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-description {
+        font-size: 1em;
+    }
+
+    .character-cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .top-nav-links {
+        flex-direction: column;
+    }
+
+    .top-nav-links li {
+        margin: 0.5em 0;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-description {
+        font-size: 0.9em;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .carousel-item {
+        min-width: 250px;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .top-nav-links {
+        display: none;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-title {
+        font-size: 1.2em;
+    }
+
+    .hero-description {
+        font-size: 0.8em;
+    }
+
+    .carousel-item {
+        min-width: 200px;
+    }
+}
